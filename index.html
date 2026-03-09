@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="A fullscreen immersive analog clock glowing through drifting neon gradients."
+    />
+    <title>Neon Clock</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="app" data-phase="midnight">
+      <div class="background" aria-hidden="true">
+        <div class="gradient-layer gradient-layer-a"></div>
+        <div class="gradient-layer gradient-layer-b"></div>
+        <div class="gradient-layer gradient-layer-c"></div>
+        <div class="gradient-layer gradient-layer-d"></div>
+        <div class="gradient-layer gradient-layer-e"></div>
+        <div class="gradient-layer gradient-layer-f"></div>
+        <div class="core-glow"></div>
+        <div class="grain"></div>
+        <div class="edge-vignette"></div>
+        <div class="vignette"></div>
+      </div>
+
+      <main class="clock-stage" aria-label="Analog clock showing local time">
+        <div class="clock" role="img" aria-live="polite">
+          <div class="hand hand-hour"></div>
+          <div class="hand hand-minute"></div>
+          <div class="hand hand-second"></div>
+          <div class="pivot"></div>
+        </div>
+      </main>
+
+      <div class="location" id="locationLabel" aria-hidden="true"></div>
+      <div class="sr-only" id="clockLabel"></div>
+    </div>
+  </body>
+</html>
